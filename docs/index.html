@@ -49,28 +49,29 @@
       background: #007AFF;
     }
 
+    .view {
+      background: #8E8E93;
+    }
+
     .android {
       background: #34A853;
     }
 
-    .copy {
-      background: #555;
+    .info {
+      display: none;
+      margin-top: 15px;
+      font-size: 14px;
+      color: #444;
+      background: #f5f5f5;
+      padding: 12px;
+      border-radius: 8px;
+      text-align: left;
     }
 
     .small {
       font-size: 13px;
       color: #777;
       margin-top: 18px;
-    }
-
-    code {
-      display: block;
-      background: #f5f5f5;
-      padding: 10px;
-      border-radius: 8px;
-      font-size: 12px;
-      word-break: break-all;
-      margin-top: 10px;
     }
   </style>
 </head>
@@ -90,29 +91,42 @@
       📱 Assinar no iPhone / iPad
     </a>
 
+    <!-- Ver aniversariantes -->
+    <a class="btn view"
+       href="https://calendar.google.com/calendar/embed?src=cfns319dgd9t0kmlptluqoioh54v32it@import.calendar.google.com"
+       target="_blank">
+      👀 Ver aniversariantes
+    </a>
+
     <!-- Android -->
-    <a class="btn android"
-       href="https://calendar.google.com">
-      🤖 Android (Google Calendar)
+    <a class="btn android" href="#"
+       onclick="copiarLink(); return false;">
+      🤖 Android — Adicionar no Google Calendar
     </a>
 
-    <p class="small">
-      No Android, a assinatura deve ser feita pelo Google Calendar.
-    </p>
-
-    <code id="calLink">
-https://calendar.google.com/calendar/ical/cfns319dgd9t0kmlptluqoioh54v32it%40import.calendar.google.com/public/basic.ics
-    </code>
-
-    <a class="btn copy" href="#"
-       onclick="navigator.clipboard.writeText(document.getElementById('calLink').innerText); alert('Link copiado!'); return false;">
-      📋 Copiar link do calendário
-    </a>
+    <div id="info" class="info">
+      <strong>Link copiado com sucesso.</strong><br><br>
+      Para adicionar no Android:<br>
+      1. Abra o <strong>Google Calendar</strong><br>
+      2. Vá em <strong>Configurações</strong><br>
+      3. Toque em <strong>Adicionar calendário</strong><br>
+      4. Escolha <strong>A partir de URL</strong><br>
+      5. Cole o link e confirme
+    </div>
 
     <p class="small">
       Compatível com iOS, Android, Outlook e Web.
     </p>
   </div>
+
+  <script>
+    function copiarLink() {
+      navigator.clipboard.writeText(
+        "https://calendar.google.com/calendar/ical/cfns319dgd9t0kmlptluqoioh54v32it%40import.calendar.google.com/public/basic.ics"
+      );
+      document.getElementById("info").style.display = "block";
+    }
+  </script>
 
 </body>
 </html>
