@@ -2,6 +2,8 @@ BEGIN:VCALENDAR
 VERSION:2.0
 CALSCALE:GREGORIAN
 PRODID:-//Escitumbiara//Aniversariantes//PT-BR
+X-WR-CALNAME:🎂 Aniversariantes - Souza Reis
+X-WR-CALDESC:Calendário oficial de aniversários
 
 BEGIN:VEVENT
 UID:gadelha.0105@escitumbiara.com
