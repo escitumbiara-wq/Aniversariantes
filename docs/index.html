@@ -4,52 +4,115 @@
   <meta charset="UTF-8">
   <title>Calendário de Aniversariantes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: #f2f2f7;
+      margin: 0;
+      padding: 0;
+    }
+
+    .card {
+      max-width: 420px;
+      margin: 80px auto;
+      background: #ffffff;
+      padding: 28px;
+      border-radius: 14px;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    }
+
+    h1 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .btn {
+      display: block;
+      margin-top: 18px;
+      padding: 14px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+    }
+
+    .ios {
+      background: #007AFF;
+    }
+
+    .android {
+      background: #34A853;
+    }
+
+    .copy {
+      background: #555;
+    }
+
+    .small {
+      font-size: 13px;
+      color: #777;
+      margin-top: 18px;
+    }
+
+    code {
+      display: block;
+      background: #f5f5f5;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 12px;
+      word-break: break-all;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 
-<body style="
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f5f5f5;
-  margin: 0;
-  padding: 0;
-">
+<body>
 
-  <div style="
-    max-width: 420px;
-    margin: 80px auto;
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  ">
+  <div class="card">
+    <h1>🎂 Calendário de Aniversariantes</h1>
 
-    <h2>🎂 Calendário de Aniversariantes</h2>
-
-    <p style="font-size: 15px; color: #555;">
-      Clique no botão abaixo para assinar o calendário oficial de aniversários.
+    <p>
+      Assine o calendário oficial para receber automaticamente os aniversários todos os anos.
     </p>
 
-    <a href="https://raw.githubusercontent.com/escitumbiara-wq/Aniversariantes/main/Aniversariantes.ics"
-       style="
-         display: inline-block;
-         margin-top: 20px;
-         padding: 14px 22px;
-         background: #007AFF;
-         color: white;
-         text-decoration: none;
-         border-radius: 8px;
-         font-size: 16px;
-         font-weight: bold;
-       ">
-       Assinar calendário
+    <!-- iOS -->
+    <a class="btn ios"
+       href="https://calendar.google.com/calendar/ical/cfns319dgd9t0kmlptluqoioh54v32it%40import.calendar.google.com/public/basic.ics">
+      📱 Assinar no iPhone / iPad
     </a>
 
-    <p style="margin-top: 30px; font-size: 12px; color: #888;">
-      Compatível com iOS e Android
+    <!-- Android -->
+    <a class="btn android"
+       href="https://calendar.google.com">
+      🤖 Android (Google Calendar)
+    </a>
+
+    <p class="small">
+      No Android, a assinatura deve ser feita pelo Google Calendar.
     </p>
 
+    <code id="calLink">
+https://calendar.google.com/calendar/ical/cfns319dgd9t0kmlptluqoioh54v32it%40import.calendar.google.com/public/basic.ics
+    </code>
+
+    <a class="btn copy" href="#"
+       onclick="navigator.clipboard.writeText(document.getElementById('calLink').innerText); alert('Link copiado!'); return false;">
+      📋 Copiar link do calendário
+    </a>
+
+    <p class="small">
+      Compatível com iOS, Android, Outlook e Web.
+    </p>
   </div>
 
 </body>
 </html>
-
