@@ -25,7 +25,7 @@
 
     h1 {
       font-size: 22px;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     p {
@@ -49,29 +49,18 @@
       background: #007AFF;
     }
 
-    .view {
-      background: #8E8E93;
-    }
-
     .android {
       background: #34A853;
     }
 
-    .info {
-      display: none;
-      margin-top: 15px;
-      font-size: 14px;
-      color: #444;
-      background: #f5f5f5;
-      padding: 12px;
-      border-radius: 8px;
-      text-align: left;
+    .view {
+      background: #8E8E93;
     }
 
     .small {
       font-size: 13px;
       color: #777;
-      margin-top: 18px;
+      margin-top: 20px;
     }
   </style>
 </head>
@@ -82,51 +71,33 @@
     <h1>🎂 Calendário de Aniversariantes</h1>
 
     <p>
-      Assine o calendário oficial para receber automaticamente os aniversários todos os anos.
+      Adicione o calendário oficial para receber automaticamente os aniversários todos os anos.
     </p>
 
     <!-- iOS -->
     <a class="btn ios"
        href="webcal://calendar.google.com/calendar/ical/cfns319dgd9t0kmlptluqoioh54v32it%40import.calendar.google.com/public/basic.ics">
-      📱 Assinar no iPhone / iPad
-    </a>
-
-    <!-- Ver aniversariantes -->
-    <a class="btn view"
-       href="https://calendar.google.com/calendar/embed?src=cfns319dgd9t0kmlptluqoioh54v32it@import.calendar.google.com"
-       target="_blank">
-      👀 Ver aniversariantes
+      📱 Adicionar calendário iOS
     </a>
 
     <!-- Android -->
-    <a class="btn android" href="#"
-       onclick="copiarLink(); return false;">
-      🤖 Android — Adicionar no Google Calendar
+    <a class="btn android"
+       href="https://calendar.google.com/calendar/render?cid=cfns319dgd9t0kmlptluqoioh54v32it@import.calendar.google.com"
+       target="_blank">
+      🤖 Adicionar calendário Android
     </a>
 
-    <div id="info" class="info">
-      <strong>Link copiado com sucesso.</strong><br><br>
-      Para adicionar no Android:<br>
-      1. Abra o <strong>Google Calendar</strong><br>
-      2. Vá em <strong>Configurações</strong><br>
-      3. Toque em <strong>Adicionar calendário</strong><br>
-      4. Escolha <strong>A partir de URL</strong><br>
-      5. Cole o link e confirme
-    </div>
+    <!-- Ver calendário -->
+    <a class="btn view"
+       href="https://calendar.google.com/calendar/embed?src=cfns319dgd9t0kmlptluqoioh54v32it@import.calendar.google.com"
+       target="_blank">
+      👀 Ver calendário
+    </a>
 
     <p class="small">
       Compatível com iOS, Android, Outlook e Web.
     </p>
   </div>
-
-  <script>
-    function copiarLink() {
-      navigator.clipboard.writeText(
-        "https://calendar.google.com/calendar/ical/cfns319dgd9t0kmlptluqoioh54v32it%40import.calendar.google.com/public/basic.ics"
-      );
-      document.getElementById("info").style.display = "block";
-    }
-  </script>
 
 </body>
 </html>
